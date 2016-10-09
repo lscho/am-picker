@@ -11,7 +11,7 @@
 		if(option.url){
 			$.getJSON(option.url,function(data){
 				if(data.length>0){
-					var option;
+					var option="";
 			        for (var i in data){
 			            option+='<option value="' + data[i].key +'">' + data[i].value + '</option>';
 			        }

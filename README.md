@@ -36,6 +36,17 @@
   **refurl**：关联元素的远程地址[demo:普通实例]
     如果select触发选择操作，并且data-am-picker参数中配置了next和refurl，那么next元素的option会从refurl中获取，并触发一次选择操作
 
+####数据格式
+
+```json
+[{"key":"1","value":"测试"},{"key":"2","value":"测试1"}]
+```
+key会渲染为option的value，vaule会渲染为option的html，如以上数据会形成以下结构
+
+```html
+<option value="1">测试</option><option value="2">测试1</option>
+```
+
 ####使用说明
 
 ```html
