@@ -25,7 +25,6 @@
 		$(document).off('change','[data-am-picker]').on('change','[data-am-picker]',function(){
 			var option = UI.utils.parseOptions($(this).attr('data-am-picker'));
 			var value=$(this).val();
-			console.log(option)
 			if(option.next&&option.refurl){
 				$(option.next).html("");
 				$(option.next).picker({
