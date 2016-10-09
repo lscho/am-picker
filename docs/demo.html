@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>amazeui-picker demo</title>
+    <link rel="stylesheet" type="text/css" href="../dist/amazeui.min.css">
+    <script type="text/javascript" src="../dist/jquery.min.js"></script>
+    <script type="text/javascript" src="../dist/amazeui.min.js"></script>
+    <script type="text/javascript" src="../dist/amazeui.picker.js"></script>
+<link href="https://cdn.bootcss.com/highlight.js/8.0/styles/github.min.css" rel="stylesheet">  
+<script src="https://cdn.bootcss.com/highlight.js/8.0/highlight.min.js"></script>  
+<script >hljs.initHighlightingOnLoad();</script>  
+    <style type="text/css">
+.am-input-group-label {background-color: #FFFFFF;border: 0px solid #ccc;}
+    </style>
+</head>
+
+<body class="am-container">
+<section class="amp-banner">
+  <div class="am-container">
+    <h1>Amaze UI Picker</h1>
+    <p class="">多级联动选择器插件</p>    
+  </div>
+<div id="github">
+  <iframe src="https://ghbtns.com/github-btn.html?user=lscho&repo=am-picker&type=watch&count=true"
+          allowtransparency="true" frameborder="0" scrolling="0" width="98" height="20"></iframe>
+  <iframe src="https://ghbtns.com/github-btn.html?user=lscho&type=follow&count=true"
+          allowtransparency="true" frameborder="0" scrolling="0" width="156" height="20"></iframe>
+</div>  
+</section>
+
+<div class="am-alert am-alert-danger" data-am-alert>
+    <button type="button" class="am-close">&times;</button>
+    <p>由于静态演示页面无法获取动态数据，故本演示数据为固定的json文件，在实际应用中在后台可以根据不同的参数显示不同的数据。可以打开开发者工具看一下请求。</p>
+</div> 
+
+    <div class="am-panel am-panel-primary">
+        <div class="am-panel-hd">普通实例</div>
+        <div class="am-panel-bd am-g">
+            <select class="am-select" id="s1" data-am-selected data-am-picker="{next:'#s2',refurl:'s2.json?city=%value%'}">
+              <option value="北京">北京</option>
+              <option value="上海">上海</option>
+            </select>
+            <select class="am-select" id="s2" data-am-selected>
+                            
+            </select>             
+        </div>  
+    </div>
+
+    <div class="am-panel am-panel-primary">
+        <div class="am-panel-hd">多级联动</div>
+        <div class="am-panel-bd am-g">
+            <select class="am-select" id="s3" data-am-selected data-am-picker="{next:'#s4',refurl:'s4.json?city=%value%'}">
+              <option value="第一级">第一级1</option>
+              <option value="第一级2">第一级2</option>
+            </select>
+            <select class="am-select" id="s4" data-am-selected data-am-picker="{next:'#s5',refurl:'s5.json?city=%value%'}">
+                            
+            </select> 
+            <select class="am-select" id="s5" data-am-selected>
+                            
+            </select>                        
+        </div>  
+    </div>
+
+    <div class="am-panel am-panel-primary">
+        <div class="am-panel-hd">使用远程数据</div>
+        <div class="am-panel-bd am-g">
+            <select class="am-select" id="s6" data-am-selected data-am-picker="{url:'s2.json',next:'#s7',refurl:'s4.json?city=%value%'}">
+
+            </select>
+            <select class="am-select" id="s7" data-am-selected>
+                            
+            </select>             
+        </div>  
+    </div>    
+
+</body>
+</html>
