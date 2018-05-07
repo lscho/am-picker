@@ -2,7 +2,7 @@
 
 [demo地址](https://lscho.github.io/am-picker/docs/demo.html "demo地址")
 
-###使用说明
+## 使用
 
 **1. 获取**
 
@@ -25,9 +25,9 @@
 </select>
 ```
 
-##文档
+## 文档
 
-####参数详解
+#### 参数详解
   **url**：远程地址[demo:使用远程数据] 
 
 页面加载时如果参数中存在url，则当前select的option会从该地址获取，并触发一次选择操作
@@ -40,7 +40,7 @@
 
 如果select触发选择操作，并且data-am-picker参数中配置了next和refurl，那么next元素的option会从refurl中获取，并触发一次选择操作
 
-####数据格式
+#### 数据格式
 
 ```json
 [{"key":"1","value":"测试"},{"key":"2","value":"测试1"}]
@@ -51,7 +51,7 @@ key会渲染为option的value，vaule会渲染为option的html，如以上数据
 <option value="1">测试</option><option value="2">测试1</option>
 ```
 
-####使用说明
+#### 使用说明
 
 ```html
 <select class="am-select" id="s6" data-am-selected data-am-picker="{url:'s2.json',next:'#s7',refurl:'s4.json?city=%value%'}">
@@ -60,6 +60,6 @@ key会渲染为option的value，vaule会渲染为option的html，如以上数据
 正确配置next和refurl即可开启多级联动
 
 
-##License
+## License
 
-MIT © 2015 - 2016 AllMobilize Inc.
+MIT
